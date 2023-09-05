@@ -3,6 +3,7 @@ from keras.models import load_model  # TensorFlow is required for Keras to work
 from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
 import os
+import fitz
 
 
 # Disable scientific notation for clarity
@@ -109,5 +110,5 @@ def chart_extractor(pdf_path):
     return extracted_charts
 
 
-list_ofcharts= chart_extractor("Wolters-Kluwer-2022-Annual Report-1 (1) (1).pdf")
-print(list_ofcharts)
+# list_ofcharts= chart_extractor("Wolters-Kluwer-2022-Annual Report-1 (1) (1).pdf")
+# print(list_ofcharts)
