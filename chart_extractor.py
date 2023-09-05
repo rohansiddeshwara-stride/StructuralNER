@@ -79,6 +79,10 @@ def chart_classif(image_path):
 def chart_extractor(pdf_path):
     folder_path = os.path.dirname(pdf_path)
 
+    if "charts" not in os.listdir():
+        os.mkdir("charts")
+        
+    folder_path = os.path.join(folder_path,'charts')
     pdf_document = fitz.open(pdf_path)
 
     extracted_charts = []
@@ -110,5 +114,5 @@ def chart_extractor(pdf_path):
     return extracted_charts
 
 
-# list_ofcharts= chart_extractor("Wolters-Kluwer-2022-Annual Report-1 (1) (1).pdf")
-# print(list_ofcharts)
+list_ofcharts= chart_extractor("Wolters-Kluwer-2022-Annual Report-1.pdf")
+print(list_ofcharts)

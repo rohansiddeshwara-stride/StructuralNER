@@ -30,7 +30,7 @@ def extract_pragraphs(pdf_path):
     pdf_document.close()
     return pragraphs
 
-# # Open the PDF file
-# pdf_path = 'Alabama_ACFR_2021 (1).pdf'
-# list_pragraphs=extract_pragraphs(pdf_path)
-# print(list_pragraphs)
+# Open the PDF file
+pdf_path = 'Wolters-Kluwer-2022-Annual Report-1.pdf'
+list_pragraphs=extract_pragraphs(pdf_path)
+print(list_pragraphs)
