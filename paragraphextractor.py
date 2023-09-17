@@ -61,7 +61,7 @@ def drop_non_paras(doc, blocks):
       pix_width = pix.width
 
       width = abs(block[0] - block[2])
-      if width > pix_width*(1/2) and not block[4].isupper() and len(block[7]) > 15 : # check if width of a para is less than 1/2 of the page width or if the block contains text which is all upper
+      if not block[4].isupper() and len(block[7]) > 7 : # check if width of a para is less than 1/2 of the page width or if the block contains text which is all upper
         avg_space = []
         ideal_space = 20
         # print(block[7])
@@ -105,6 +105,6 @@ def extract_pragraphs(doc_path):
   return final_blocks
 
 
-pdf_path = 'Wolters-Kluwer-2022-Annual Report-1.pdf'
+pdf_path = 'Alabama_ACFR_2021.'
 list_pragraphs=extract_pragraphs(pdf_path)
 print(list_pragraphs)
